@@ -231,6 +231,12 @@ Atoma Node: `http://localhost:3000` (configured via ATOMA_SERVICE_PORT). You are
 
 #### Managing the Deployment
 
+The deployment defaults to `info` level logs, in order to change the log level upon deployment, you can run set the `ATOMA_LOG_LEVELS` env variable at runtime.
+
+```bash
+ATOMA_LOG_LEVELS=atoma_p2p=info,atoma_daemon=debug docker compose up -d --build
+```
+
 Check service status:
 
 ```bash
